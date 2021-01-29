@@ -161,6 +161,24 @@ var metrics = {
 };
 
 var curves = {
+  v8: {
+    mobile: {
+      FCP: {weight: 0.15, median: 4000, p10: 2336},
+      SI: {weight: 0.15, median: 5800, p10: 3387},
+      LCP: {weight: 0.25, median: 4000, p10: 2500},
+      TTI: {weight: 0.15, median: 7300, p10: 3785},
+      TBT: {weight: 0.25, median: 600, p10: 287},
+      CLS: {weight: 0.05, median: 0.25, p10: 0.1},
+    },
+    desktop: {
+      FCP: {weight: 0.15, median: 1600, p10: 934},
+      SI: {weight: 0.15, median: 2300, p10: 1311},
+      LCP: {weight: 0.25, median: 2400, p10: 1200},
+      TTI: {weight: 0.15, median: 4500, p10: 2468},
+      TBT: {weight: 0.25, median: 350, p10: 150},
+      CLS: {weight: 0.05, median: 0.25, p10: 0.1},
+    },
+  },
   v6: {
     mobile: {
       FCP: {weight: 0.15, median: 4000, p10: 2336},
@@ -201,6 +219,10 @@ function makeScoringGuide(curves) {
 
 var scoringGuides = {
   // v7 scoring is identical to v6
+  v8: {
+    mobile: makeScoringGuide(curves.v8.mobile),
+    desktop: makeScoringGuide(curves.v6.desktop),
+  },
   v7: {
     mobile: makeScoringGuide(curves.v6.mobile),
     desktop: makeScoringGuide(curves.v6.desktop),
@@ -800,6 +822,8 @@ var App = /*@__PURE__*/(function (Component) {
         ),
         h( 'label', null, "Versions: ", h( 'select', { name: "versions", value: normalizedVersions.join(','), onChange: this.onVersionsChange },
             h( 'option', { value: "6,5" }, "show all"),
+            h( 'option', { value: "6,8" }, "v6, v8"),
+            h( 'option', { value: "8" }, "v8"),
             h( 'option', { value: "6" }, "v6, v7"),
             h( 'option', { value: "5" }, "v5")
           )
