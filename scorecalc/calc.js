@@ -163,11 +163,11 @@ var metrics = {
 var curves = {
   v8: {
     mobile: {
-      FCP: {weight: 0.15, median: 2985, p10: 1762},
-      SI: {weight: 0.15, median: 4583, p10: 2707},
-      LCP: {weight: 0.25, median: 3250, p10: 2031},
+      FCP: {weight: 0.15, median: 2450, p10: 1445.5},
+      SI: {weight: 0.15, median: 3900, p10: 2262},
+      LCP: {weight: 0.25, median: 2800, p10: 1568},
       TTI: {weight: 0.15, median: 6476, p10: 3300},
-      TBT: {weight: 0.25, median: 500, p10: 241},
+      TBT: {weight: 0.25, median: 500, p10: 225},
       CLS: {weight: 0.05, median: 0.25, p10: 0.1},
     },
     desktop: {
