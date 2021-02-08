@@ -10,6 +10,24 @@ export const metrics = {
 };
 
 export const curves = {
+  v8: {
+    mobile: {
+      FCP: {weight: 0.15, median: 2450, p10: 1445.5},
+      SI: {weight: 0.15, median: 3900, p10: 2262},
+      LCP: {weight: 0.25, median: 2800, p10: 1568},
+      TTI: {weight: 0.15, median: 6476, p10: 3300},
+      TBT: {weight: 0.25, median: 500, p10: 225},
+      CLS: {weight: 0.05, median: 0.25, p10: 0.1},
+    },
+    desktop: {
+      FCP: {weight: 0.15, median: 1600, p10: 934},
+      SI: {weight: 0.15, median: 2300, p10: 1311},
+      LCP: {weight: 0.25, median: 2400, p10: 1200},
+      TTI: {weight: 0.15, median: 4500, p10: 2468},
+      TBT: {weight: 0.25, median: 350, p10: 150},
+      CLS: {weight: 0.05, median: 0.25, p10: 0.1},
+    },
+  },
   v6: {
     mobile: {
       FCP: {weight: 0.15, median: 4000, p10: 2336},
@@ -50,6 +68,10 @@ function makeScoringGuide(curves) {
 
 export const scoringGuides = {
   // v7 scoring is identical to v6
+  v8: {
+    mobile: makeScoringGuide(curves.v8.mobile),
+    desktop: makeScoringGuide(curves.v6.desktop),
+  },
   v7: {
     mobile: makeScoringGuide(curves.v6.mobile),
     desktop: makeScoringGuide(curves.v6.desktop),

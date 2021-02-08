@@ -280,6 +280,8 @@ class App extends Component {
         <label>Versions:
           <select name="versions" value={normalizedVersions.join(',')} onChange={this.onVersionsChange} >
             <option value="6,5">show all</option>
+            <option value="6,8">v6, v8</option>
+            <option value="8">v8</option>
             <option value="6">v6, v7</option>
             <option value="5">v5</option>
           </select>

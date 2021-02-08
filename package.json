@@ -7,16 +7,18 @@
     "watch": "find . script -depth 1 -type f | entr yarn build",
     "build": "rollup -c",
     "clean": "rm -rf dist",
-    "deploy:ghpages": "yarn gh-pages --dist dist --repo git@github.com:GoogleChrome/lighthouse.git --dest scorecalc --add --message scorecalc-update",
+    "deploy:ghpages": "yarn gh-pages --dist dist --repo git@github.com:Bharat23/lh-scorecalc.git --dest scorecalc --add --message scorecalc-update",
     "deploy:copy": "mkdir -p dist && cp -r index.html *.css calc.* dist",
     "deploy": "yarn clean && yarn build && yarn deploy:copy && yarn deploy:ghpages",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "yarn build && http-server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "gh-pages": "^2.2.0",
+    "http-server": "^0.12.3",
     "rollup": "^2.6.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0"
