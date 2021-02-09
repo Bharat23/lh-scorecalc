@@ -12,10 +12,10 @@ export const metrics = {
 export const curves = {
   v8: {
     mobile: {
-      FCP: {weight: 0.15, median: 2450, p10: 1445.5},
-      SI: {weight: 0.15, median: 3900, p10: 2262},
+      FCP: {weight: 0.15, median: 2600, p10: 1534},
+      SI: {weight: 0.15, median: 3800, p10: 2204},
       LCP: {weight: 0.25, median: 2800, p10: 1568},
-      TTI: {weight: 0.15, median: 6476, p10: 3300},
+      TTI: {weight: 0.15, median: 5350, p10: 2782},
       TBT: {weight: 0.25, median: 500, p10: 225},
       CLS: {weight: 0.05, median: 0.25, p10: 0.1},
     },
