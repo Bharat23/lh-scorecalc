@@ -525,8 +525,7 @@ var Metric = /*@__PURE__*/(function (Component) {
 
     var ref = this.props;
     var id = ref.id;
-    console.log(e.target.valueAsNumber);
-    console.log(e.target);
+    
     this.props.app.setState({
       metricValues: Object.assign({}, this.props.app.state.metricValues,
         ( obj = {}, obj[id] = e.target.valueAsNumber, obj )),
