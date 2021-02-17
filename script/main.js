@@ -38,7 +38,8 @@ function getMajorVersion(version) {
 class Metric extends Component {
   onValueChange(e) {
     const {id} = this.props;
-
+    console.log(e.target.valueAsNumber)
+    console.log(e.target)
     this.props.app.setState({
       metricValues: {
         ...this.props.app.state.metricValues,
@@ -84,7 +85,7 @@ class Metric extends Component {
       </td>
       <td>{`${id} (${metricScoring.name})`}</td>
       <td>
-        <input type="range" min={min} value={value} max={max} step={step} class={`${id} metric-value`} onInput={(e) => this.onValueChange(e)} />
+        <input type="number" min={min} value={value} max={max} step={step} class={`${id} metric-value`} onInput={(e) => this.onValueChange(e)} />
         <output class="${id} value-output">{valueFormatted}</output>
       </td>
       <td></td>
