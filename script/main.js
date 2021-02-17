@@ -38,8 +38,7 @@ function getMajorVersion(version) {
 class Metric extends Component {
   onValueChange(e) {
     const {id} = this.props;
-    console.log(e.target.valueAsNumber)
-    console.log(e.target)
+    
     this.props.app.setState({
       metricValues: {
         ...this.props.app.state.metricValues,
