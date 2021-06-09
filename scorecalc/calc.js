@@ -840,8 +840,9 @@ var App = /*@__PURE__*/(function (Component) {
         ),
         h( 'label', null, "Versions: ", h( 'select', { name: "versions", value: normalizedVersions.join(','), onChange: this.onVersionsChange },
             h( 'option', { value: "6,5" }, "show all"),
-            h( 'option', { value: "6,8,9" }, "v6, v8, v9"),
+            h( 'option', { value: "8,9" }, "v8, v9"),
             h( 'option', { value: "6,8" }, "v6, v8"),
+            h( 'option', { value: "8" }, "v9"),
             h( 'option', { value: "8" }, "v8"),
             h( 'option', { value: "6" }, "v6, v7"),
             h( 'option', { value: "5" }, "v5")
