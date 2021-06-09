@@ -10,6 +10,24 @@ export const metrics = {
 };
 
 export const curves = {
+  v9: {
+    mobile: {
+      FCP: {weight: 0.10, median: 2600, p10: 1534},
+      SI: {weight: 0.10, median: 3800, p10: 2204},
+      LCP: {weight: 0.25, median: 2800, p10: 1568},
+      TTI: {weight: 0.10, median: 5350, p10: 2782},
+      TBT: {weight: 0.30, median: 500, p10: 225},
+      CLS: {weight: 0.15, median: 0.25, p10: 0.1},
+    },
+    desktop: {
+      FCP: {weight: 0.10, median: 1600, p10: 934},
+      SI: {weight: 0.10, median: 2300, p10: 1311},
+      LCP: {weight: 0.25, median: 2400, p10: 1200},
+      TTI: {weight: 0.10, median: 4500, p10: 2468},
+      TBT: {weight: 0.30, median: 350, p10: 150},
+      CLS: {weight: 0.15, median: 0.25, p10: 0.1},
+    },
+  },
   v8: {
     mobile: {
       FCP: {weight: 0.15, median: 2600, p10: 1534},
