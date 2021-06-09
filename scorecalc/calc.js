@@ -543,7 +543,7 @@ var Metric = /*@__PURE__*/(function (Component) {
 
     var ref = this.props;
     var id = ref.id;
-
+    
     this.props.app.setState({
       metricValues: Object.assign({}, this.props.app.state.metricValues,
         ( obj = {}, obj[id] = e.target.valueAsNumber, obj )),
@@ -601,7 +601,7 @@ var Metric = /*@__PURE__*/(function (Component) {
       ),
       h( 'td', null, (id + " (" + (metricScoring.name) + ")") ),
       h( 'td', null,
-        h( 'input', { type: "range", min: min, value: value, max: max, step: step, class: (id + " metric-value"), onInput: function (e) { return this$1.onValueChange(e); } }),
+        h( 'input', { type: "number", min: min, value: value, max: max, step: step, class: (id + " metric-value"), onInput: function (e) { return this$1.onValueChange(e); } }),
         h( 'output', { class: "${id} value-output" }, valueFormatted)
       ),
       h( 'td', null ),
